@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ -f ./install.iso ]; then
+if [ -f /sysboot/iso/install.iso ]; then
 	echo "Install"
-	[ ! -f ./hdd.img ] && qemu-img create -f qcow2 ./hdd.img 64G
+	[ ! -f /sysboot/img/hdd.img ] && qemu-img create -f qcow2 /sysboot/img/hdd.img 64G
 	./boot-install.sh
 else
-	if [ ! -f ./hdd.img ]; then
+	if [ ! -f /sysboot/img/hdd.img ]; then
 		echo "hdd.img is not exist!"
 	else
 		echo "Run Mac"
