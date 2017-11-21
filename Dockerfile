@@ -5,7 +5,7 @@ MAINTAINER Deokhyun Ko "mainto@gmail.com"
 # Install.
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get install -y qemu
+RUN apt-get install -y qemu uml-utilities libguestfs-tools
 RUN rm -rf /var/lib/apt/lists/*
 
 # Add files.
